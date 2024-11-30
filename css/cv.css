@@ -1,0 +1,205 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    padding: 100px;
+}
+
+a {
+    color: white;
+}
+
+.main-nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Larger space */
+}
+
+.main-nav .logo {
+    font-size: 30px;
+    font-weight: 700; /* Boldness */
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 35px;
+}
+
+.main-nav ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.main-nav ul li:hover a,
+.main-nav ul li .active a {
+    color: aqua;
+}
+
+.my-cv h2 {
+    padding-bottom: 30px;
+}
+
+.my-cv {
+    color: white;
+}
+
+table {
+    border-collapse: collapse; /* This makes the borders collapse into a single border */
+    border: 2px solid aqua; /* Sets the outer border color */
+}
+
+th, td {
+    border-collapse: collapse;
+    border: 3px solid aqua;
+    padding-left: 30px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper, .my-Certifications {
+    width: 33.3%;
+}
+
+.skills h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.skills ul li {
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0 0 45px aqua;
+    transition: box-shadow 0.5s;
+    position: relative;
+    align-items: center;
+}
+
+.img {
+    width: 33.3%;
+    height: auto;
+}
+
+.my-Certifications {
+    color: white;
+    font-size: 18px;
+}
+
+.languages h2 {
+    padding-bottom: 30px;
+}
+
+.languages {
+    color: white;
+}
+
+.languages ul li {
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+h2 {
+    color: aquamarine;
+    font-weight: 700;
+}
+
+.contact {
+    font-size: 20px;
+    width: 130px;
+    border-radius: 20px;
+    border: 2px solid aqua;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact a:hover {
+    background: aqua;
+    color: black;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .wrapper, .my-Certifications {
+        width: 50%; /* Adjust width for larger tablets */
+    }
+
+    .img {
+        width: 50%; /* Adjust width for larger tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+
+    .main-nav ul li {
+        margin-left: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .wrapper, .my-Certifications {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .img {
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px; /* Add some spacing above the image */
+    }
+
+    table {
+        font-size: 14px; /* Smaller font for tables on mobile */
+    }
+
+    th, td {
+        padding-left: 15px; /* Reduce padding for smaller tables */
+    }
+
+    .contact {
+        width: auto; /* Allow contact button to adjust width */
+        padding: 10px; /* Add some padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav .logo {
+        font-size: 24px; /* Smaller logo on mobile */
+    }
+
+    .main-nav ul li {
+        font-size: 16px; /* Smaller font size for nav links */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller h2 font on mobile */
+    }
+
+    .contact {
+        font-size: 18px; /* Smaller font for contact button */
+    }
+}

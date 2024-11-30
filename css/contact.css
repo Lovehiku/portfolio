@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    padding-top: 100px;
+    font-family: Arial, sans-serif;
+}
+a {
+    color: white;
+}
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.main-nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.main-nav ul {
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 20px;
+}
+.main-nav ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.main-nav ul li:hover a,
+.main-nav ul li .active a {
+    color: aqua;
+}
+
+.form {
+    color: black;
+    background-color: aqua;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 750px;
+    margin: 20px auto;
+    text-align: left;
+}
+.form label {
+    color: white;
+    font-weight: bold;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.form button[type="submit"] {
+    background-color: #1e90ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form button[type="submit"]:hover {
+    background-color: #6495ed;
+}
+.contact h2 {
+    margin-bottom: 20px;
+}
+.contact p {
+    padding-bottom: 10px;
+}
+.follow h2 {
+    margin-bottom: 25px;
+}
+
+.contact, .follow {
+    color: white;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+.contact p, .follow-me a {
+    color: aquamarine;
+}
+.follow-me a {
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.follow-me a:hover {
+    color: #6495ed;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+    .form, .contact, .follow {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .form input[type="text"],
+    .form input[type="email"],
+    .form textarea {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 767px) {
+    .main-nav ul li {
+        margin-left: 15px;
+    }
+    .form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-nav {
+        padding: 20px 5%;
+    }
+    .main-nav .logo {
+        font-size: 28px;
+    }
+    .form, .contact, .follow {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .main-nav {
+        padding: 20px 7%;
+    }
+    .main-nav .logo {
+        font-size: 30px;
+    }
+    .form {
+        max-width: 85%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    .main-nav {
+        padding: 25px 10%;
+    }
+    .form, .contact, .follow {
+        max-width: 750px;
+    }
+}

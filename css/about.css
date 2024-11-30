@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+a {
+    color: white;
+}
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.main-nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.main-nav ul {
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 20px;
+}
+.main-nav ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.main-nav ul li:hover a, .main-nav ul li .active a {
+    color: aqua;
+}
+.main-sec img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-right: 40px;
+    transition: 5s;
+    box-shadow: 0 0 10px aqua;
+}
+.main-sec {
+    margin-top: 100px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.Education, .Interest {
+    color: black;
+    border: 2px solid aqua;
+    border-radius: 20px;
+    box-shadow: 10px white;
+    padding: 15px;
+    background: aqua;
+    margin: 10px;
+    width: 100%;
+    max-width: 350px;
+}
+.Education h3 {
+    color: aqua;
+    padding-bottom: 10px;
+}
+.Education p {
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+.Interest {
+    padding: 40px;
+    text-align: center;
+    color: black;
+}
+.Interest h2 {
+    padding-bottom: 10px;
+}
+.Interest ul li {
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+footer p {
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid aqua;
+    border-radius: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+footer a {
+    border: 2px solid aqua;
+    background: aqua;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+footer a:hover {
+    background: none;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+    .main-sec img {
+        height: 150px;
+        width: 150px;
+        margin-right: 0;
+    }
+    .Education, .Interest {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .Education p, .Interest ul li {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 767px) {
+    .main-nav ul li {
+        margin-left: 10px;
+    }
+    .main-sec img {
+        height: 170px;
+        width: 170px;
+    }
+    .Education, .Interest {
+        width: 85%;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-nav {
+        padding: 20px 5%;
+    }
+    .main-nav .logo {
+        font-size: 28px;
+    }
+    .Education, .Interest {
+        max-width: 45%;
+        margin: 20px;
+    }
+    footer p {
+        max-width: 80%;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .main-nav {
+        padding: 20px 7%;
+    }
+    .main-nav .logo {
+        font-size: 30px;
+    }
+    .Education, .Interest {
+        max-width: 40%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    .main-nav {
+        padding: 25px 10%;
+    }
+    .Education, .Interest {
+        max-width: 350px;
+    }
+}

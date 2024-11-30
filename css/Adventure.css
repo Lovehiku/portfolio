@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    padding-top: 100px;
+}
+a {
+    color: white;
+}
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.main-nav .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+.main-nav ul {
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 35px;
+}
+.main-nav ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.main-nav ul li:hover a,
+.main-nav ul li .active a {
+    color: aqua;
+}
+h2 {
+    color: aquamarine;
+    font-weight: 700;
+    font-size: 31px;
+}
+.my-journey,
+.green-area,
+.waterfall,
+.heyna {
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.my-journey p,
+.green-area p,
+.waterfall p,
+.heyna p {
+    padding-top: 20px;
+    font-size: 18px;
+    padding-right: 100px;
+}
+.green-area img,
+.waterfall img,
+.heyna img {
+    width: 350px;
+    height: auto;
+    margin-top: 30px;
+    align-items: center;
+    border: 2px solid aqua;
+    border-radius: 60%;
+    box-shadow: 0 0 16px aqua;
+}
+.container,
+.wrapper {
+    display: flex;
+}
+audio {
+    margin-top: 50px;
+}
+footer {
+    color: aqua;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+footer a {
+    border: 2px solid aqua;
+    border-radius: 20px;
+    background: aquamarine;
+    color: black;
+    padding: 5px 10px;
+}
+
+/* Responsive Styles */
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .main-nav .logo {
+        font-size: 24px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .container,
+    .wrapper {
+        flex-direction: column;
+    }
+    .my-journey p,
+    .green-area p,
+    .waterfall p,
+    .heyna p {
+        padding-right: 20px;
+    }
+    .green-area img,
+    .waterfall img,
+    .heyna img {
+        width: 100%;
+        max-width: 300px;
+    }
+    footer {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 767px) {
+    .main-nav ul {
+        gap: 10px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    .container,
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .green-area img,
+    .waterfall img,
+    .heyna img {
+        width: 80%;
+        max-width: 300px;
+    }
+    footer {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-nav {
+        padding: 20px 8%;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .my-journey p,
+    .green-area p,
+    .waterfall p,
+    .heyna p {
+        padding-right: 50px;
+    }
+    .green-area img,
+    .waterfall img,
+    .heyna img {
+        width: 300px;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .main-nav {
+        padding: 25px 8%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .my-journey p,
+    .green-area p,
+    .waterfall p,
+    .heyna p {
+        padding-right: 80px;
+    }
+    .green-area img,
+    .waterfall img,
+    .heyna img {
+        width: 350px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    .container,
+    .wrapper {
+        flex-direction: row;
+    }
+}
