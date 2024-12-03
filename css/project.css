@@ -1,86 +1,125 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
-
-/* Section Title */
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 20px 0 40px 0;
-    color: #333;
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
 }
-
-/* Projects Container */
-.projects-container {
+a {
+    color: white;
+}
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 5%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
+.main-nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.main-nav ul {
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 20px;
+}
+.main-nav ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.main-nav ul li:hover a, .main-nav ul li .active a {
+    color: aqua;
+}
+.main-sec img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-right: 40px;
+    transition: 5s;
+    box-shadow: 0 0 10px aqua;
+}
+.main-sec {
+    margin-top: 100px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 
-/* Individual Project Card */
-.project {
+}
+.section-title  {
+    color: aliceblue;
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+} 
+.My-portfolio  , .food-website {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: calc(33.333% - 20px); /* Three cards per row */
     text-align: center;
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+    justify-content: center;
+    width: 33.3%;
+    margin-top: 70px ;
+    margin-left: 50px;
 
-.project img {
+}
+.Bookstore {
+    background-color:lightblue;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 33.3%;
+    margin-top: 70px ;
+    margin-left: 50px;
+
+}
+ .cake-website {
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+    width: 33.3%;
+    justify-content: center;
+    margin-top: 70px ;
+    margin-left: 50px;
+
+ } 
+.My-portfolio h3 ,  .Bookstore h3 , .cake-website  h3 , .food-website h3 {
+    padding: 20px 0 20px 0;
+}
+.My-portfolio p , .Bookstore p , .cake-website p , .food-website p {
+    padding:0 5px 5px 15px;
+    font-size: 12px;
+}
+.My-portfolio img ,  .Bookstore img  , .food-website img  , .cake-website img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.project h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #22B14C;
-}
-
-.project p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.project a {
-    text-decoration: none;
-    color: white;
-    background-color: #22B14C;
-    padding: 10px 20px;
+} 
+.My-portfolio a ,  .Bookstore a , .cake-website  a , .food-website a {
+    color:white;
+    padding: 10px;
+    background-color:black;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+    margin-top: 15px;
+    font-size: 8px;
+}
+.My-portfolio a:hover ,  .Bookstore a:hover , .cake-website  a:hover , .food-website a:hover {
+    color: black;
+    background-color: white;
+} 
+.second-article , .first-article {
+    display: flex;
+    justify-content: space-around;
 }
 
-.project a:hover {
-    background-color: #1b8f3d;
-}
-
-/* Project Hover Effect */
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .project {
-        width: calc(50% - 20px); /* Two cards per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .project {
-        width: 100%; /* One card per row */
-    }
-}
